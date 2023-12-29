@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>おみくじ</title>
+    <script type="text/javascript" src="excanvas.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <div id="image-container" style="display: block;"></div>
+    <div id="modal" onclick="closeModal()">
+        <img src="" id="modal-image" onclick="imageClicked(event)">
+        <div id="scratchScreen" style="display: none;">
+            <button id="scratch">スクラッチ</button>
+        </div>
+    </div>
+
+    <div class="container" id="scratchArea" style="display: none;">
+        <canvas id="cover" width="480" height="320"></canvas>
+        <div class="coupon"><img id="randomImage" src="" alt="Coupon" width="480" height="320" />
+    </div>
+
+    <script src="ramdomPosition.js"></script>
+    <script src="modal.js"></script>
+</body>
+</html>
