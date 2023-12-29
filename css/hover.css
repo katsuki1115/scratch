@@ -1,0 +1,51 @@
+/* 中間バナー */
+#modal img.modal-bnr,
+#modal img.modal-bnr::before,
+#modal img.modal-bnr::after {
+  transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+}
+#modal img.modal-bnr {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+#modal img.modal-bnr::before,
+#modal img.modal-bnr::after {
+  display: block;
+  opacity: 0;
+  position: absolute;
+}
+#modal img.modal-bnr::before {
+  background: inherit;
+  content: "";
+  filter: blur(3px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  z-index: -1;
+  transition-duration: 0.4s;
+}
+#modal img.modal-bnr::after {
+  color: #fff;
+  content: "Read More";
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition-duration: 0.2s;
+}
+#modal img.modal-bnr:hover::after {
+  transition-delay: .5s;
+}
+#modal img.modal-bnr:hover::before,
+#modal img.modal-bnr:hover::after {
+  opacity: 1;
+}

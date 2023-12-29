@@ -1,0 +1,64 @@
+#image-container {
+    position: relative;
+    width: 100%;
+    height: 500px; /* 高さを設定 */
+    border: 1px solid #000; /* コンテナの境界を確認しやすくするため */
+}
+.random-image {
+    position: absolute;
+    max-width: 100px; /* 画像の最大幅 */
+    cursor: pointer; /* カーソルをポインタに変更 */
+}
+
+#modal {
+    display: none; 
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 1000;
+}
+#modal img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*CanvasのCSS*/
+/* 画像のスタイリング */
+.coupon img {
+    width: 100%; /* 画像をコンテナの幅に合わせる */
+    height: auto; /* 高さを自動調整し、アスペクト比を保持 */
+}
+
+.container {
+    position: relative;
+    width: 320px; /* コンテナの幅を指定 */
+    height: 160px; /* コンテナの高さを指定 */
+    margin: 0 auto; /* 中央配置 */
+}
+
+#cover {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* キャンバスを中央に配置 */
+    width: 320px; /* キャンバスの幅 */
+    height: 160px; /* キャンバスの高さ */
+    z-index: 1001; /* キャンバスを前面に */
+}
+
+.coupon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* 画像を中央に配置 */
+    width: 320px; /* 画像の幅 */
+    height: 480px; /* 画像の高さ */
+    display: block; /* ブロックレベル要素として表示 */
+}
